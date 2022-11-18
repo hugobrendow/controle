@@ -1,0 +1,13 @@
+rootProject.name = "controle"
+
+include 'main'
+
+include 'domain'
+project(":domain").projectDir = file("project/domain")
+
+include 'rest'
+project(":rest").projectDir = file("project/application/rest")
+
+include 'database'
+project(":database").projectDir = file("project/infrastructure/database")
+
