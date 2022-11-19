@@ -11,3 +11,5 @@ project(":rest").projectDir = file("project/application/rest")
 include 'database'
 project(":database").projectDir = file("project/infrastructure/database")
 
+include 'components'
+project(":components").projectDir = file("project/components")
