@@ -3,7 +3,7 @@ package br.com.drogariaorigem.adapter.domain
 import br.com.drogariaorigem.dbo.toDBO
 import br.com.drogariaorigem.domain.ports.infrastructure.CashFlowDataPort
 import br.com.drogariaorigem.domain.shared.exception.CashFlowNotFoundException
-import br.com.drogariaorigem.domain.usecases.model.CashFlow
+import br.com.drogariaorigem.domain.shared.model.CashFlow
 import br.com.drogariaorigem.repository.CashFlowRepository
 import usecases.DataAccessAdapter
 

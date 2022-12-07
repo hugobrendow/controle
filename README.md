@@ -22,10 +22,10 @@ Para utilização do serviço em ambiente local, você precisará das seguintes 
 
 Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
 
-Diga como essa etapa será:
+Primeira etapa, será a criação de um container responsável por manter o banco de dados.
 
-```
-Dar exemplos
+```sh
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=controle mysql
 ```
 
 E repita:

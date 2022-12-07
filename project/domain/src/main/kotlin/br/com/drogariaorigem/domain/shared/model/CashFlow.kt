@@ -1,6 +1,6 @@
-package br.com.drogariaorigem.domain.usecases.model
+package br.com.drogariaorigem.domain.shared.model
 
-import br.com.drogariaorigem.domain.usecases.model.parameters.CashFlowCategory
+import br.com.drogariaorigem.domain.shared.model.parameters.CashFlowCategory
 import java.time.LocalDate
 
 data class CashFlow(

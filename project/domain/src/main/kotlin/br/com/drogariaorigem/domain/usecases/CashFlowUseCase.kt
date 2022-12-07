@@ -3,8 +3,8 @@ package br.com.drogariaorigem.domain.usecases
 import br.com.drogariaorigem.domain.ports.domain.CashFlowPort
 import br.com.drogariaorigem.domain.ports.infrastructure.CashFlowCategoryDataPort
 import br.com.drogariaorigem.domain.ports.infrastructure.CashFlowDataPort
-import br.com.drogariaorigem.domain.usecases.model.CashFlow
-import br.com.drogariaorigem.domain.usecases.model.vo.CashFlowRequest
+import br.com.drogariaorigem.domain.shared.model.CashFlow
+import br.com.drogariaorigem.domain.shared.model.vo.CashFlowRequest
 import usecases.UseCase
 
 @UseCase
@@ -16,6 +16,13 @@ class CashFlowUseCase(
     override fun create(cashFlow: CashFlowRequest): CashFlow {
         val category = cashFlowCategoryAdapter.findById(cashFlow.category)
         return cashFlowAdapter.save(cashFlow.toModel(category, null))
+    }
+
+    override fun batchCreate(cashFlow: List<CashFlowRequest>): List<CashFlow> {
+        return cashFlow.map {
+            val category = cashFlowCategoryAdapter.findById(it.category)
+            cashFlowAdapter.save(it.toModel(category, null))
+        }.toList()
     }
 
     override fun update(id: Long, cashFlowRequest: CashFlowRequest): CashFlow {

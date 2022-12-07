@@ -1,6 +1,6 @@
-package br.com.drogariaorigem.domain.usecases.model.parameters
+package br.com.drogariaorigem.domain.shared.model.parameters
 
-import br.com.drogariaorigem.domain.usecases.model.enums.CashFlowCategoryTypeEnum
+import br.com.drogariaorigem.domain.shared.model.enums.CashFlowCategoryTypeEnum
 
 data class CashFlowCategory(
         val id: Long,

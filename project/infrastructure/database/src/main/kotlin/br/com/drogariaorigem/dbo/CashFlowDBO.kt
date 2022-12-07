@@ -2,7 +2,7 @@ package br.com.drogariaorigem.dbo
 
 import br.com.drogariaorigem.dbo.parameters.CashFlowCategoryDBO
 import br.com.drogariaorigem.dbo.parameters.toDBO
-import br.com.drogariaorigem.domain.usecases.model.CashFlow
+import br.com.drogariaorigem.domain.shared.model.CashFlow
 import java.time.LocalDate
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue

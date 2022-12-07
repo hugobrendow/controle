@@ -1,6 +1,6 @@
 package br.com.drogariaorigem.controller.cashflow.dto
 
-import br.com.drogariaorigem.domain.usecases.model.vo.CashFlowRequest
+import br.com.drogariaorigem.domain.shared.model.vo.CashFlowRequest
 import java.time.LocalDate
 
 data class CreateCashFlowDTO(

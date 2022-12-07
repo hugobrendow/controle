@@ -1,6 +1,6 @@
 package br.com.drogariaorigem.domain.ports.infrastructure
 
-import br.com.drogariaorigem.domain.usecases.model.CashFlow
+import br.com.drogariaorigem.domain.shared.model.CashFlow
 
 interface CashFlowDataPort {
     fun save(cashFlow: CashFlow) : CashFlow

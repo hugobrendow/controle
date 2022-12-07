@@ -7,3 +7,9 @@ class CashFlowCategoryException(id: Long) :
 
 class CashFlowNotFoundException(id: Long) :
         BusinessException("CASH-FLOW-01", "Fluxo de caixa não encontrado: $id")
+
+class ChargeNotFoundException(id: Long) :
+        BusinessException("CHARGE-01", "Despesa não encontrada: $id")
+
+class CnpjExistsException(cnpj: String) :
+        BusinessException("PROV-01", "Este CNPJ já existe cadastrado: $cnpj")

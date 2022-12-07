@@ -1,13 +1,19 @@
 package br.com.drogariaorigem.controller.parameters
 
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import br.com.drogariaorigem.controller.parameters.dto.CreateChargeCategoryDTO
+import br.com.drogariaorigem.domain.ports.domain.ChargeCategoryPort
+import org.springframework.web.bind.annotation.*
 
 @RequestMapping("/charges/category")
 @RestController
-class ChargeCategoryController {
+class ChargeCategoryController(val port: ChargeCategoryPort) {
 
     @GetMapping
-    fun helloProvider() = "hello provider"
+    fun listAll() = port.listAll()
+
+    @GetMapping("/{id}")
+    fun findById(@PathVariable id: Long) = port.findById(id)
+
+    @PostMapping
+    fun create(@RequestBody charge: CreateChargeCategoryDTO) = port.save(charge.toModel(null))
 }
