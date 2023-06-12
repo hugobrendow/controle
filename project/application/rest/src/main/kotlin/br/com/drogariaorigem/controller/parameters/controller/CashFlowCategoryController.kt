@@ -1,4 +1,4 @@
-package br.com.drogariaorigem.controller.parameters
+package br.com.drogariaorigem.controller.parameters.controller
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

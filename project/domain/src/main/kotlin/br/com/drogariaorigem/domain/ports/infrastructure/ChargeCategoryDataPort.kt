@@ -6,4 +6,5 @@ interface ChargeCategoryDataPort {
     fun save(charge: ChargeCategoryVO) : ChargeCategoryVO
     fun findAll(): List<ChargeCategoryVO>
     fun findById(id: Long): ChargeCategoryVO
+    fun remove(id: Long)
 }

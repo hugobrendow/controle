@@ -17,11 +17,11 @@ data class ChargeDBO(
         val amountValue: Double,
         val liquidValue: Double,
         val complementInvoice: String,
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.EAGER)
         val provider: ProviderDBO,
         @OneToMany(fetch = FetchType.EAGER, cascade = [CascadeType.ALL])
         val installments: List<InstallmentDBO>,
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.EAGER)
         val category: ChargeCategoryDBO,
 ) {
     fun toModel() = ChargeVO(
